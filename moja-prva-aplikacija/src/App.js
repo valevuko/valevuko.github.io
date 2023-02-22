@@ -1,7 +1,8 @@
 import "./App.css";
+import randomstring from "randomstring";
 
 function App() {
-  return <div></div>;
+  return <div>{randomstring.generate()}</div>;
 }
 
 export default App;
