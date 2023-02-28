@@ -1,15 +1,17 @@
-import "./App.css";
+import './App.css';
 
 function App() {
-  const name = "Valentina";
+
+  const name = "Marta";
+
   const user = {
-    firstName: "Valentina",
-    lastName: "Horvat",
-  };
+    firstName: "Ivan",
+    lastName: "Horvat"
+  }
 
   const element0 = <h1>Hello</h1>;
-  const element1 = <p>{name}</p>;
-  const element2 = <p>{user.lastName,}, {user.firstName}</p>;
+  const element1 = <p>Hello, {name}</p>;
+  const element2 = <p>{user.firstName}, {user.lastName}</p>;
 
   return (
     <div>
@@ -21,3 +23,10 @@ function App() {
 }
 
 export default App;
+
+// U ovoj vježbi, potrebno je napraviti sljedeće:
+// 	1.	Napraviti novu React aplikaciju
+// 	2.	Unutar App komponente napraviti dvije varijable koje sadrže neki string
+// 	3.	Napraviti JSX element koji će prikazati neki tekst na ekranu
+// 	4.	Napraviti JSX element koji će prikazati neki tekst na ekranu + vrijednost jedne od varijabli
+// 	5.	Napraviti JSX element koji će prikazati obje varijable odvojene razmakom
