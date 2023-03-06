@@ -9,7 +9,12 @@ function App() {
 
   const [name, setName] = useState("");
   //ako očekujemo stringu onda u zagradu trebamo staviti navodnike
-  function handleSubmit(event) {}
+  function handleSubmit(event) {
+    event.preventDefault(); //zaustavlja refresh/reload stranice
+    alert(name); //zaustavlja kod na toj liniji dok ne kliknemo ok/uredu
+
+    setName(""); //briše unos u "Ime:"
+  }
 
   function handleNameChange(event) {
     const value = event.target.value;
