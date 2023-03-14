@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchNasa } from "./actions";
 
 export default function Nasa() {
-    const [data, setData] = useState(null);
+
+    const dispatch = useDispatch();
+    const data = useSelector((state) => state.nasa.data);
+    // const data = useSelector((state) => { return state.nasa.data; });
 
     useEffect(() => {
-  
-      fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-        .then(res => res.json())
-        .then(data => {
-          setData(data);
-        })
-    }, []);
+        dispatch(fetchNasa());
+    }, [dispatch]);
   
     if (!data) {
       return <p>Loading NASA data...</p>
